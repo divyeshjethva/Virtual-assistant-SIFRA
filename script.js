@@ -11,6 +11,7 @@ function speak(text){
     window.speechSynthesis.speak(text_speak)
 }
 
+
 function wishMe(){
     let day=new Date()
     let hours=day.getHours()
@@ -23,9 +24,8 @@ function wishMe(){
         speak("Good Evening Sir")
     }
 }
-// window.addEventListener('load',()=>{
-//     wishMe()
-// })
+
+
 let speechRecognition= window.SpeechRecognition || window.webkitSpeechRecognition 
 let recognition =new speechRecognition()
 recognition.onresult=(event)=>{
@@ -86,3 +86,4 @@ function takeCommand(message){
         window.open(`https://www.google.com/search?q=${message.replace("shipra","")}`,"_blank")
     }
 }
+
